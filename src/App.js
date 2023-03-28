@@ -1,25 +1,40 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+const DEVELOPER = "Emmallex Technologies";
+
+function Footer() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      All rights reserved &copy; {DEVELOPER}
+    </div>
+  )
+}
+
+function Header() {
+  return (
+    <div className='wrapper'>
+      <div>
+        <h1>Hello World</h1>  
+      </div>
+      <div>
+        This is the test header
+      </div>
     </div>
   );
+}
+
+function Wrapper() {
+  return (
+    <>
+      <Header />
+      <Footer />
+    </>
+  );
+}
+
+function App() {
+  return <Wrapper />
 }
 
 export default App;

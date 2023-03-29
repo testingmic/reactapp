@@ -23,10 +23,10 @@ const Header = () => {
       <div>
         This is the test header
       </div>
-      <p>
+      <div>
         <Greet />
         <Welcome />
-      </p>
+      </div>
     </div>
   );
 }

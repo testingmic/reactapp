@@ -1,8 +1,15 @@
+import React, { Component } from 'react';
+import logo from './logo.svg';
 import './App.css';
+import Greet from './components/Greet';
 
 const DEVELOPER = "Emmallex Technologies";
 
-function Footer() {
+class Heatmap {
+  
+}
+
+const Footer = () => {
   return (
     <div>
       All rights reserved &copy; {DEVELOPER}
@@ -10,7 +17,7 @@ function Footer() {
   )
 }
 
-function Header() {
+const Header = () => {
   return (
     <div className='wrapper'>
       <div>
@@ -19,6 +26,9 @@ function Header() {
       <div>
         This is the test header
       </div>
+      <p>
+        <Greet />
+      </p>
     </div>
   );
 }
@@ -26,14 +36,26 @@ function Header() {
 function Wrapper() {
   return (
     <>
-      <Header />
-      <Footer />
+      <div className='App'>
+        <Header />
+          <header>
+            <img src={logo} className="App-logo" alt="logo" />
+            <p>
+              This is the test class creation.
+            </p>
+          </header>
+        <Footer />
+      </div>
     </>
   );
 }
 
-function App() {
-  return <Wrapper />
+class App extends Component {
+  render() {
+    return (
+      <Wrapper />
+    )
+  }
 }
 
 export default App;

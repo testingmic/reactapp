@@ -2,12 +2,9 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Greet from './components/Greet';
+import Welcome from './components/Welcome';
 
 const DEVELOPER = "Emmallex Technologies";
-
-class Heatmap {
-  
-}
 
 const Footer = () => {
   return (
@@ -28,6 +25,7 @@ const Header = () => {
       </div>
       <p>
         <Greet />
+        <Welcome />
       </p>
     </div>
   );
